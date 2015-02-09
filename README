@@ -1,4 +1,2 @@
-This is your new Play application
-=================================
-
-This file will be packaged with your application, when using `activator dist`.
+I'm a newbie, so this is just a test app in Play framework.
+The app generates a QR code.

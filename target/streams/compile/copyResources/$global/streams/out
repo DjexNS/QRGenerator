@@ -1,3 +1,3 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/home/djex/Downloads/activator-1.2.12/play-java/conf/application.conf,/home/djex/Downloads/activator-1.2.12/play-java/target/scala-2.11/classes/application.conf)[0m
-[0m[[0mdebug[0m] [0m	(/home/djex/Downloads/activator-1.2.12/play-java/conf/routes,/home/djex/Downloads/activator-1.2.12/play-java/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/djex/Public/QRGenerator/conf/application.conf,/home/djex/Public/QRGenerator/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/djex/Public/QRGenerator/conf/routes,/home/djex/Public/QRGenerator/target/scala-2.11/classes/routes)[0m

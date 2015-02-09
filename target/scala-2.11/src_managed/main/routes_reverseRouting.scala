@@ -1,6 +1,6 @@
-// @SOURCE:/home/djex/Downloads/play-java1/conf/routes
+// @SOURCE:/home/djex/Public/QRGenerator/conf/routes
 // @HASH:942ebe9da12c2eec463830b0de67600501c8759c
-// @DATE:Mon Feb 09 12:46:31 CET 2015
+// @DATE:Mon Feb 09 23:14:49 CET 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._

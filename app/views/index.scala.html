@@ -1,0 +1,29 @@
+@()
+
+@main("Welcome to QR Generator") {
+	<script type='text/javascript' src='@routes.Assets.at("javascripts/index.js")'></script>
+
+	<ul id="events"></ul>
+
+	<form method="POST" action="@routes.Application.addEvent()">
+		Title: <input type="text" name="title"/>
+		<br/>
+		Description: <input type="text" name="description"/>
+		<br/>
+		Start date: <input type="datetime-local" name="startDate">
+		Duration: <input type="text" name="duration"/>
+		<br/>
+		
+	<!--		Recurrence: <select name="recurrenceType1">
+			<option value="oneTimeEvent">One time event</option>
+			<option value="daily">Daily</option>
+			<option value="weekly">Weekly</option>
+			<option value="monthly">Monthly</option>
+		</select>
+		Count: <input type="text" name="recurrenceCount1"/> -->
+	
+		<br/>
+		<button>Add Event</button>
+	</form>
+	
+}

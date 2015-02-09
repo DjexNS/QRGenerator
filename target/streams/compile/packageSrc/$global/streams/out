@@ -1,0 +1,19 @@
+[0m[[0minfo[0m] [0mPackaging /home/djex/Public/QRGenerator/target/scala-2.11/play-java_2.11-1.0-SNAPSHOT-sources.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	models/CalendarEvent.java[0m
+[0m[[0mdebug[0m] [0m	  /home/djex/Public/QRGenerator/app/models/CalendarEvent.java[0m
+[0m[[0mdebug[0m] [0m	controllers/Application.java[0m
+[0m[[0mdebug[0m] [0m	  /home/djex/Public/QRGenerator/app/controllers/Application.java[0m
+[0m[[0mdebug[0m] [0m	application.conf[0m
+[0m[[0mdebug[0m] [0m	  /home/djex/Public/QRGenerator/conf/application.conf[0m
+[0m[[0mdebug[0m] [0m	routes[0m
+[0m[[0mdebug[0m] [0m	  /home/djex/Public/QRGenerator/conf/routes[0m
+[0m[[0mdebug[0m] [0m	controllers/CodeController.java[0m
+[0m[[0mdebug[0m] [0m	  /home/djex/Public/QRGenerator/app/controllers/CodeController.java[0m
+[0m[[0mdebug[0m] [0m	controllers/QRCodeGenerator.java[0m
+[0m[[0mdebug[0m] [0m	  /home/djex/Public/QRGenerator/app/controllers/QRCodeGenerator.java[0m
+[0m[[0mdebug[0m] [0m	models/QRCode.java[0m
+[0m[[0mdebug[0m] [0m	  /home/djex/Public/QRGenerator/app/models/QRCode.java[0m
+[0m[[0mdebug[0m] [0m	models/Person.java[0m
+[0m[[0mdebug[0m] [0m	  /home/djex/Public/QRGenerator/app/models/Person.java[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

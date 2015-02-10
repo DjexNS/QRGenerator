@@ -42,14 +42,14 @@ Seq[Any](format.raw/*1.4*/("""
 		Duration: <input type="text" name="duration"/>
 		<br/>
 		
-	<!--		Recurrence: <select name="recurrenceType1">
+			Recurrence: <select name="recurrenceType1">
 			<option value="oneTimeEvent">One time event</option>
 			<option value="daily">Daily</option>
 			<option value="weekly">Weekly</option>
 			<option value="monthly">Monthly</option>
 		</select>
-		Count: <input type="text" name="recurrenceCount1"/> -->
-	
+		Count: <input type="text" name="recurrenceCount1"/> 
+		
 		<br/>
 		<button>Add Event</button>
 	</form>
@@ -66,9 +66,9 @@ Seq[Any](format.raw/*1.4*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Feb 09 23:14:50 CET 2015
+                  DATE: Tue Feb 10 08:46:50 CET 2015
                   SOURCE: /home/djex/Public/QRGenerator/app/views/index.scala.html
-                  HASH: 6637f02105dd92d65d051ae6e323d763a47e25e5
+                  HASH: b4e261d3142c573d5434d003dd6e45cb69df773b
                   MATRIX: 716->1|805->3|833->6|872->37|911->39|939->41|1002->78|1016->84|1070->118|1163->185|1177->191|1220->214
                   LINES: 26->1|29->1|31->3|31->3|31->3|32->4|32->4|32->4|32->4|36->8|36->8|36->8
                   -- GENERATED --

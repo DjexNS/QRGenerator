@@ -605,3 +605,332 @@ Caused by: javax.persistence.PersistenceException: The default EbeanServer has n
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [na:na]
 	... 6 common frames omitted
 
+2015-02-10 07:51:50,503 - [INFO] - from play in run-main-0 
+Application started (Prod)
+
+2015-02-10 07:51:50,773 - [INFO] - from play in run-main-0 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2015-02-10 08:41:06,892 - [INFO] - from play in run-main-3 
+Application started (Prod)
+
+2015-02-10 08:41:07,334 - [INFO] - from play in run-main-3 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2015-02-10 08:43:12,687 - [ERROR] - from play in play-akka.actor.default-dispatcher-6 
+Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: The default EbeanServer has not been defined? This is normally set via the ebean.datasource.default property. Otherwise it should be registered programatically via registerServer()
+
+2015-02-10 08:43:12,725 - [ERROR] - from application in play-akka.actor.default-dispatcher-6 
+
+
+! @6l65nlfcn - Internal server error, for (POST) [/event] ->
+
+play.api.Application$$anon$1: Execution exception[[PersistenceException: The default EbeanServer has not been defined? This is normally set via the ebean.datasource.default property. Otherwise it should be registered programatically via registerServer()]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[na:na]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [na:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [na:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [na:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [na:na]
+Caused by: javax.persistence.PersistenceException: The default EbeanServer has not been defined? This is normally set via the ebean.datasource.default property. Otherwise it should be registered programatically via registerServer()
+	at com.avaje.ebean.Ebean$ServerManager.getPrimaryServer(Ebean.java:178) ~[na:na]
+	at com.avaje.ebean.Ebean$ServerManager.access$300(Ebean.java:128) ~[na:na]
+	at com.avaje.ebean.Ebean.save(Ebean.java:453) ~[na:na]
+	at play.db.ebean.Model.save(Model.java:95) ~[na:na]
+	at controllers.Application.addEvent(Application.java:60) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:146) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:146) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[na:na]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[na:na]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[na:na]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [na:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[na:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [na:na]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[na:na]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[na:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[na:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[na:na]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [na:na]
+	... 6 common frames omitted
+
+2015-02-10 08:43:22,095 - [ERROR] - from play in play-akka.actor.default-dispatcher-6 
+Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: The default EbeanServer has not been defined? This is normally set via the ebean.datasource.default property. Otherwise it should be registered programatically via registerServer()
+
+2015-02-10 08:43:22,100 - [ERROR] - from application in play-akka.actor.default-dispatcher-6 
+
+
+! @6l65nm3a3 - Internal server error, for (POST) [/event] ->
+
+play.api.Application$$anon$1: Execution exception[[PersistenceException: The default EbeanServer has not been defined? This is normally set via the ebean.datasource.default property. Otherwise it should be registered programatically via registerServer()]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[na:na]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [na:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [na:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [na:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [na:na]
+Caused by: javax.persistence.PersistenceException: The default EbeanServer has not been defined? This is normally set via the ebean.datasource.default property. Otherwise it should be registered programatically via registerServer()
+	at com.avaje.ebean.Ebean$ServerManager.getPrimaryServer(Ebean.java:178) ~[na:na]
+	at com.avaje.ebean.Ebean$ServerManager.access$300(Ebean.java:128) ~[na:na]
+	at com.avaje.ebean.Ebean.save(Ebean.java:453) ~[na:na]
+	at play.db.ebean.Model.save(Model.java:95) ~[na:na]
+	at controllers.Application.addEvent(Application.java:60) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:146) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:146) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[na:na]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[na:na]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[na:na]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [na:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[na:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [na:na]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[na:na]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[na:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[na:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[na:na]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [na:na]
+	... 6 common frames omitted
+
+2015-02-10 08:47:24,062 - [INFO] - from play in run-main-0 
+Application started (Prod)
+
+2015-02-10 08:47:24,324 - [INFO] - from play in run-main-0 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2015-02-10 08:48:07,811 - [ERROR] - from play in play-akka.actor.default-dispatcher-2 
+Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: The default EbeanServer has not been defined? This is normally set via the ebean.datasource.default property. Otherwise it should be registered programatically via registerServer()
+
+2015-02-10 08:48:07,830 - [ERROR] - from application in play-akka.actor.default-dispatcher-2 
+
+
+! @6l65oca1a - Internal server error, for (POST) [/event] ->
+
+play.api.Application$$anon$1: Execution exception[[PersistenceException: The default EbeanServer has not been defined? This is normally set via the ebean.datasource.default property. Otherwise it should be registered programatically via registerServer()]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[na:na]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [na:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [na:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [na:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [na:na]
+Caused by: javax.persistence.PersistenceException: The default EbeanServer has not been defined? This is normally set via the ebean.datasource.default property. Otherwise it should be registered programatically via registerServer()
+	at com.avaje.ebean.Ebean$ServerManager.getPrimaryServer(Ebean.java:178) ~[na:na]
+	at com.avaje.ebean.Ebean$ServerManager.access$300(Ebean.java:128) ~[na:na]
+	at com.avaje.ebean.Ebean.save(Ebean.java:453) ~[na:na]
+	at play.db.ebean.Model.save(Model.java:95) ~[na:na]
+	at controllers.Application.addEvent(Application.java:60) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:146) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:146) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[na:na]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[na:na]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[na:na]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [na:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[na:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [na:na]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[na:na]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[na:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[na:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[na:na]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [na:na]
+	... 6 common frames omitted
+
+2015-02-10 08:56:18,941 - [INFO] - from play in run-main-6 
+Application started (Prod)
+
+2015-02-10 08:56:19,081 - [INFO] - from play in run-main-6 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2015-02-10 08:56:43,362 - [ERROR] - from play in play-akka.actor.default-dispatcher-3 
+Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: The default EbeanServer has not been defined? This is normally set via the ebean.datasource.default property. Otherwise it should be registered programatically via registerServer()
+
+2015-02-10 08:56:43,379 - [ERROR] - from application in play-akka.actor.default-dispatcher-3 
+
+
+! @6l65pfii6 - Internal server error, for (POST) [/event] ->
+
+play.api.Application$$anon$1: Execution exception[[PersistenceException: The default EbeanServer has not been defined? This is normally set via the ebean.datasource.default property. Otherwise it should be registered programatically via registerServer()]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[na:na]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [na:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [na:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [na:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [na:na]
+Caused by: javax.persistence.PersistenceException: The default EbeanServer has not been defined? This is normally set via the ebean.datasource.default property. Otherwise it should be registered programatically via registerServer()
+	at com.avaje.ebean.Ebean$ServerManager.getPrimaryServer(Ebean.java:178) ~[na:na]
+	at com.avaje.ebean.Ebean$ServerManager.access$300(Ebean.java:128) ~[na:na]
+	at com.avaje.ebean.Ebean.save(Ebean.java:453) ~[na:na]
+	at play.db.ebean.Model.save(Model.java:95) ~[na:na]
+	at controllers.Application.addEvent(Application.java:60) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:146) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:146) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[na:na]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[na:na]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[na:na]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [na:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[na:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [na:na]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[na:na]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[na:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[na:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[na:na]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[na:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[na:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [na:na]
+	... 6 common frames omitted
+
+2015-02-10 09:02:07,573 - [INFO] - from play in run-main-0 
+database [default] connected at jdbc:h2:mem:play
+
+2015-02-10 09:08:58,742 - [INFO] - from play in run-main-2 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-02-10 09:08:59,030 - [INFO] - from play in run-main-2 
+database [default] connected at jdbc:h2:mem:play
+
+2015-02-10 09:11:48,471 - [INFO] - from play in run-main-5 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-02-10 09:11:49,369 - [INFO] - from play in run-main-5 
+database [default] connected at jdbc:h2:mem:play
+
+2015-02-10 10:02:45,133 - [INFO] - from play in run-main-7 
+Application started (Prod)
+
+2015-02-10 10:02:45,266 - [INFO] - from play in run-main-7 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+

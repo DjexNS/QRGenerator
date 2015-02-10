@@ -16,8 +16,8 @@ public class CalendarEvent extends Model implements java.io.Serializable
 	private String description;
 	private String startDate;
 	private float duration;
-//	private int recurrenceType;
-//	private int recurrenceCount;
+	private int recurrenceType;
+    private int recurrenceCount;
 	
 	public String getTitle() {
 		return title;
@@ -43,7 +43,7 @@ public class CalendarEvent extends Model implements java.io.Serializable
 	public void setDuration(float duration) {
 		this.duration = duration;
 	}
-/*	public int getRecurrenceType() {
+	public int getRecurrenceType() {
 		return recurrenceType;
 	}
 	public void setRecurrenceType(int recurrenceType) {
@@ -55,14 +55,14 @@ public class CalendarEvent extends Model implements java.io.Serializable
 	public void setRecurrenceCount(int recurrenceCount) {
 		this.recurrenceCount = recurrenceCount;
 	}
-*/	
+	
 	@Override
 	public String toString() {
 		return "CalendarEvent [title=" + title + ", description=" + description
 				+ ", startDate=" + startDate + ", duration=" + duration
-//				+ ", recurrenceType=" + recurrenceType + ", recurrenceCount="
-//				+ recurrenceCount + "]";
-				+ "]";
+				+ ", recurrenceType=" + recurrenceType + ", recurrenceCount="
+				+ recurrenceCount + "]";
+//				+ "]";
 	}
 	
 	

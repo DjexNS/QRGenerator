@@ -23,20 +23,20 @@ RUN         cd /tmp && \
             rm typesafe-activator-$ACTIVATOR_VERSION.zip
 
 # COMMIT PROJECT FILES
-ADD         app /root/app
-ADD         test /root/test
-ADD         conf /root/conf
-ADD         lib /root/lib
-ADD         public /root/public
-ADD         build.sbt /root/
-ADD         project/plugins.sbt /root/project/
-ADD         project/build.properties /root/project/
+ADD         app /QRGenerator/app
+ADD         test /QRGenerator/test
+ADD         conf /QRGenerator/conf
+ADD         lib /QRGenerator/lib
+ADD         public /QRGenerator/public
+ADD         build.sbt /QRGenerator/
+ADD         project/plugins.sbt /QRGenerator/project/
+ADD         project/build.properties /QRGenerator/project/
 
 # TEST AND BUILD THE PROJECT -- FAILURE WILL HALT IMAGE CREATION
 #RUN         cd /root; /usr/local/activator/activator test stage
 #RUN         rm /root/target/universal/stage/bin/*.bat
 
 # TESTS PASSED -- CONFIGURE IMAGE
-WORKDIR     /root
+WORKDIR     /QRGenerator
 ENTRYPOINT  target/universal/stage/bin/$(ls target/universal/stage/bin)
 EXPOSE      9000
